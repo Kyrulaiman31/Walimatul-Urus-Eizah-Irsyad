@@ -129,7 +129,7 @@ div .sticky {
 .navbar {
     position: fixed;
     bottom: 0;
-    width: 35%;
+    width: 30%;
     background-color: #F5EBEB;
     color: black;
     border-radius: 10px;
@@ -152,7 +152,7 @@ div .sticky {
     padding: 30px;
     text-align:  center;
     font-family: 'Cormorant', serif;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
 
 
