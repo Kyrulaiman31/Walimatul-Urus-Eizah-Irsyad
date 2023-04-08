@@ -20,8 +20,8 @@ div {
 div .container .box {
     border: 2px solid gold;
     border-radius: 5%;
-    height: 950x;
-    width: 450px;
+    height:650x;
+    
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
     
 
@@ -36,6 +36,7 @@ div .first {
     background-image: url('images/3div.jpg');
     background-position: center;
     height: 650px;
+    width: 500px;
     
 }
     
@@ -51,7 +52,8 @@ div .second {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 600px;
+    height: 650px;
+    width: 500px;
     
 
 }
@@ -67,7 +69,8 @@ div .third {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 600px;
+    height: 650px;
+    width: 500px;
    
    
     
@@ -77,7 +80,9 @@ div .fourth {
     background-color: white;
     opacity: 0;
     transition: opacity 0.99s ease;
-    height: 600px;
+    height: 650px;
+    width: 500px;
+    
     
    
     
@@ -101,8 +106,8 @@ div .sticky {
 /* Media query for screens smaller than 600px */
 @media (max-width: 1200px){
     .container .box {
-        height: 650px;
-        width: 600px;
+        height: 600px;
+        width: 400px;
     }
     
 
@@ -113,7 +118,7 @@ div .sticky {
     .box {
       height: 750px;
       margin: 10px;
-      width:550px ;
+      width:600px ;
       
     }
     
