@@ -159,16 +159,17 @@ div .sticky {
 
     
   }
-  .icon {
+    .icon {
     display: block;
     text-align: center; /* adjust as needed */
+    font-size: 30px;
   }
   
   .text {
     display: block;
     text-align: center; /* adjust as needed */
+    font-size: 15px;
   }
-  
   /* Mobile responsive */
 @media only screen and (max-width: 1025px) {
     .navbar {
