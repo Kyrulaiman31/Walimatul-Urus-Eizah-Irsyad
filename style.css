@@ -171,16 +171,18 @@ div .sticky {
   /* Mobile responsive */
 @media only screen and (max-width: 1025px) {
     .navbar {
-        width: 450px;
+        width: 350px;
     }
     .navbar ul {
       justify-content: space-between;
       align-items: center;
-      width: 400px;
+      width: 350px;
     }
     
     .navbar li {
       padding: 10px 0;
+      font-size:20px;
+      padding: 10px;
     }
   }
 
