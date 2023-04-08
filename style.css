@@ -20,7 +20,7 @@ div {
 div .container .box {
     border: 2px solid gold;
     border-radius: 5%;
-    height:650x;
+    /* height:450px; */
     
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
     
@@ -35,8 +35,8 @@ div .first {
     position: relative;
     background-image: url('images/3div.jpg');
     background-position: center;
-    height: 650px;
-    width: 500px;
+    height: 750px;
+    width: 550px;
     
 }
     
@@ -52,8 +52,8 @@ div .second {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 650px;
-    width: 500px;
+    height: 750px;
+    width: 550px;
     
 
 }
@@ -69,8 +69,8 @@ div .third {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 650px;
-    width: 500px;
+    height: 750px;
+    width: 550px;
    
    
     
@@ -80,9 +80,8 @@ div .fourth {
     background-color: white;
     opacity: 0;
     transition: opacity 0.99s ease;
-    height: 650px;
-    width: 500px;
-    
+    height: 850px;
+    width: 550px;
     
    
     
@@ -106,8 +105,8 @@ div .sticky {
 /* Media query for screens smaller than 600px */
 @media (max-width: 1200px){
     .container .box {
-        height: 600px;
-        width: 400px;
+        height: 550px;
+        width: 370px;
     }
     
 
@@ -129,13 +128,15 @@ div .sticky {
 .navbar {
     position: fixed;
     bottom: 0;
-    width: 30%;
+    width: 400px;
     background-color: #F5EBEB;
-    color: black;
+    opacity: 0.8;
+    /* color: black; */
     border-radius: 10px;
     height: 65px;
     border: 2px solid gold;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    
     
   }
   
@@ -171,16 +172,16 @@ div .sticky {
   /* Mobile responsive */
 @media only screen and (max-width: 1025px) {
     .navbar {
-        width: 350px;
+        width: 320px;
     }
     .navbar ul {
       justify-content: space-between;
       align-items: center;
-      width: 350px;
+      width: 330px;
     }
     
     .navbar li {
-      padding: 10px 0;
+      padding: 5px 0;
       font-size:20px;
       padding: 10px;
     }
@@ -188,7 +189,7 @@ div .sticky {
 
   @media only screen and (max-width: 481px) {
     .navbar {
-      width: 450px;
+      width: 400px;
   }
   .navbar ul {
     justify-content: space-between;
