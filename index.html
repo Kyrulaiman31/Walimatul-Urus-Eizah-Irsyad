@@ -7,16 +7,30 @@
 
     <!--Styling sheets-->
     <link rel="stylesheet" href="style.css">
-    <!--google fonts-->
+    <link rel="stylesheet" href="style/all.min.css">
 
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,300&display=swap" rel="stylesheet">
+    <!--Google icon-->
+    
 </head>
-<body>
+<body onload="playAudio()">
     <div >
         <div class="container">
-            <div class="first box" style="background-image: url('images/Light Grayish Orange Aesthetic Wedding Invitation.jpg');">
+            <div class="first box" >
+                <div id="container" class="balls-container">
+                    <div class="ball ball-1"></div>
+                    <div class="ball ball-2"></div>
+                    <div class="ball ball-3"></div>
+                    <div class="ball ball-4"></div>
+                    <div class="ball ball-5"></div>
+                  </div>
 
             </div>
             <div class="second box visible">
+                
 
             </div>
             <div class="third box visible">
@@ -27,10 +41,31 @@
             </div>
             <div class="navbar">
                 <ul>
-                    <li>Kalendar</li>
-                    <li>Hubungi</li>
-                    <li>Lokasi</li>
-                    <li>Rsvp</li>
+                    <li><a href="#">
+                        <span class="icon">
+                            <ion-icon name="calendar-clear-outline"></ion-icon>
+                        </span>
+                        <span class="text">Kalendar</span>
+                    </li></a>
+                    <li><a href="#">
+                        <span class="icon">
+                            <ion-icon name="call-outline"></ion-icon>
+                        </span>
+                        <span class="text">Hubungi</span>
+                    </a></li>
+                    <li><a href="#">
+                        <span class="icon">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </span>
+                        <span class="text">lokasi</span>
+                    </a></li>
+                    <li><a href="#">
+                        <span class="icon">
+                            <ion-icon name="open-outline"></ion-icon>
+                        </span>
+                        <span class="text">RSV</span>
+                    </a></li>
+                    
                 </ul>
             </div>
             
@@ -44,5 +79,7 @@
 
 
     <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

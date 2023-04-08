@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const second = document.querySelector('.second');
     const third = document.querySelector('.third');
@@ -27,3 +29,4 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+

@@ -1,10 +1,10 @@
 * {
     margin: 0%;
+    
 }
 
 body {
-    background: rgb(58,147,180);
-    background: linear-gradient(90deg, rgba(58,147,180,1) 0%, rgba(29,120,253,1) 50%, rgba(136,69,252,1) 100%);
+    background-color: #F5EBEB;
 }
 
 div {
@@ -18,10 +18,11 @@ div {
 }
 
 div .container .box {
-    border: 1px solid black;
+    border: 2px solid gold;
     border-radius: 5%;
-    height: 650px;
+    height: 950x;
     width: 450px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
     
 
 
@@ -31,6 +32,11 @@ div .first {
     background-color: #E4D0D0;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+    background-image: url('images/3div.jpg');
+    background-position: center;
+    height: 650px;
+    
 }
     
     
@@ -41,15 +47,27 @@ div .second {
     background-color: white;
     opacity: 0;
     transition: opacity 0.99s ease;
-    
-    
+    background-image: url('images/1div.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
     
 
 }
+
+
+
+
 div .third {
     background-color: white;
     opacity: 0;
     transition: opacity 0.99s ease;
+    background-image: url('images/2div.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
    
    
     
@@ -59,6 +77,7 @@ div .fourth {
     background-color: white;
     opacity: 0;
     transition: opacity 0.99s ease;
+    height: 600px;
     
    
     
@@ -77,31 +96,41 @@ div .sticky {
     position: sticky;
 }
 
+
+
 /* Media query for screens smaller than 600px */
-@media (max-width: 600px){
-    .box {
-        height: 200px;
+@media (max-width: 1200px){
+    .container .box {
+        height: 650px;
+        width: 600px;
     }
     
 
 }
 
 /* Media query for screens smaller than 400px */
-@media (max-width: 400px) {
+@media (min-width: 768px) {
     .box {
-      height: 150px;
-      margin: 2.5px;
+      height: 750px;
+      margin: 10px;
+      width:550px ;
+      
     }
     
 }
+
+
+
 .navbar {
     position: fixed;
     bottom: 0;
-    width: 40%;
-    background-color: #8EA7E9;
-    color: #00337C;
+    width: 35%;
+    background-color: #F5EBEB;
+    color: black;
     border-radius: 10px;
-    height: 60px;
+    height: 65px;
+    border: 2px solid gold;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
     
   }
   
@@ -115,13 +144,27 @@ div .sticky {
   }
   
   .navbar li {
-    padding: 10px;
-    justify-content: space-evenly;
+    padding: 30px;
+    text-align:  center;
+    font-family: 'Cormorant', serif;
+    font-size: 25px;
+    font-weight: bold;
+
+
     
+  }
+  .icon {
+    display: block;
+    text-align: center; /* adjust as needed */
+  }
+  
+  .text {
+    display: block;
+    text-align: center; /* adjust as needed */
   }
   
   /* Mobile responsive */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1025px) {
     .navbar {
         width: 450px;
     }
@@ -135,3 +178,107 @@ div .sticky {
       padding: 10px 0;
     }
   }
+
+  @media only screen and (max-width: 481px) {
+    .navbar {
+      width: 450px;
+  }
+  .navbar ul {
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+  }
+  
+  .navbar li {
+    padding: 10px 0;
+  }
+  }
+
+  .balls-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  
+  
+  .ball {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    animation: move 3s ease-in-out infinite;
+    background-color: white;
+    filter: blur(3px);
+
+  }
+  
+  .ball-1 {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0.5s;
+    
+  }
+  
+  .ball-2 {
+    top: 40%;
+    left: 50%;
+    animation-delay: 1s;
+    
+    
+  }
+  
+  .ball-3 {
+    top: 80%;
+    left: 20%;
+    animation-delay: 1.5s;
+    
+  }
+  
+  .ball-4 {
+    top: 50%;
+    left: 80%;
+    animation-delay: 2s;
+    
+    
+  }
+  
+  .ball-5 {
+    top: 70%;
+    left: 40%;
+    animation-delay: 2.5s;
+    opacity: 3;
+    
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(50px, 50px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+
+}
+
+a:hover {
+
+    color: green
+    
+    
+}
+
+
+
