@@ -13,8 +13,15 @@ p {
 }
 
 h1 {
-  font-family: 'Amperzand', sans-serif;
-  font-weight: lighter;
+  font-family: 'Cormorant', serif;
+  letter-spacing: 2px;
+  
+  
+}
+
+.animate-paragraph {
+  font-family: 'Great Vibes', cursive;
+  margin: 0;
 }
 
 div {
@@ -47,6 +54,7 @@ div .first  {
     background-position: center;
     height: 850px;
     width: 600px;
+    
     
 }
 
@@ -244,8 +252,40 @@ div .second {
     background-size: cover;
     height: 850px;
     width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     
 
+}
+
+div .second .content h1 {
+  font-size: 60px;
+  letter-spacing: 5px;
+  font-family: 'Great Vibes', cursive;
+  font-weight: 100;
+  padding-top: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  height: 55px;
+
+}
+
+div .second .content p {
+  font-size: 35px;
+  padding-bottom: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width: 1200px) {
+  div .second .content h1{
+    font-size: 90px;
+    height: 85px;
+    
+  }
+  div .second .content p {
+    font-size: 55px;
+  }
 }
 
 
@@ -272,7 +312,7 @@ div .fourth {
     transition: opacity 0.99s ease;
     height: 850px;
     width: 600px;
-    background-image: url('images/5div.jpg');
+    background-image: url('images/6div.jpg');
     background-repeat: no-repeat;
     background-origin: center;
     background-size: cover;
@@ -281,6 +321,37 @@ div .fourth {
     align-items: center;
     flex-direction: column;
 
+}
+
+div .fourth .content h1{
+  font-weight: 100;
+}
+
+.visible .fifth {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-heading {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.visible .animate-heading {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-paragraph {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.visible .animate-paragraph {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
@@ -304,6 +375,20 @@ div .sixth {
   height: 850px;
   width: 600px;
   background-image: url('images/5div.jpg');
+  background-repeat: no-repeat;
+  background-origin: center;
+  background-size: cover;
+}
+
+
+
+div .seventh {
+  background-color: white;
+  opacity: 0;
+  transition: opacity 0.99s ease;
+  height: 850px;
+  width: 600px;
+  background-image: url('images/7div.jpg');
   background-repeat: no-repeat;
   background-origin: center;
   background-size: cover;
@@ -352,14 +437,14 @@ div .content  {
 }
 
 div .content h1 {
-  padding-top: 100px;
+  padding-top: 60px;
   font-size: 40px;
-  /* padding-right: 25px; */
 }
 
 div .content p {
   padding-right: 35px;
   padding-left: 30px;
+  padding-top: 5px;
 }
 
 
@@ -368,12 +453,11 @@ div .content p {
   div .content {
     font-size:30px ;
     padding-top: 40px;
-    /* padding-left: 30px;
-    padding-right: 30px; */
+    
   }
   div .content h1 {
-    font-size: 60px;
-    /* padding-right: 35px; */
+    font-size: 40px;
+    
   }
   
 }
@@ -381,7 +465,7 @@ div .content p {
 @media (min-width: 1025px) and (max-width: 1200px) {
   div .content h1 {
     font-size: 40px;
-    padding-top: 60px;
+    padding-top: 20px;
     /* padding-right: 20px; */
   }
   
@@ -420,15 +504,15 @@ div .content p {
   .navbar li {
     padding: 30px;
     text-align:  center;
-    font-family: 'Cormorant', serif;
-    font-size: 20px;
-    font-weight: bold;
+    
+    /* font-size: 20px; */
+    font-weight: 900;
 
   }
   .icon {
     display: block;
     text-align: center; /* adjust as needed */
-    font-size: 30px;
+    /* font-size: 30px; */
 
   }
   
@@ -436,10 +520,12 @@ div .content p {
     display: block;
     text-align: center; /* adjust as needed */
     font-size: 15px;
-    font-family: 'Amperzand', sans-serif;
+    font-family: 'Cormorant', serif;
     font-weight: lighter;
 
   }
+
+  
   
   /* Mobile responsive */
 @media only screen and (max-width: 1025px) {
@@ -480,6 +566,35 @@ div .content p {
     }
   }
 
+.navbar li .icon img {
+  height: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .navbar li .icon img{
+    height: 35px;
+    width: 35px;
+    
+  }
+  .navbar li {
+    width: 30px;
+  }
+  .navbar li #position_edit{
+    padding-top: 5px;
+    padding-left: 10px;
+  }
+  .navbar .icon #size_edit {
+    height:40px;
+  }
+}
+
+
+
+
+
+
+
+
 
   /*link style */
 a {
@@ -489,12 +604,11 @@ a {
 
 }
 
-a:hover {
+a:hover  {
 
     color: green
      
 }
-
 
 
 .sound button {

@@ -1,49 +1,4 @@
-// const windowHeight = window.innerHeight;
-// const second = document.querySelector('.second');
-// const third = document.querySelector('.third');
-// const fourth = document.querySelector('.fourth');
-// const fifth = document.querySelector('.fifth');
-// const sixth = document.querySelector('.sixth');
-
-// window.addEventListener('scroll', _.throttle(function() {
-//   const secondTop = second.getBoundingClientRect().top;
-//   const thirdTop = third.getBoundingClientRect().top;
-//   const fourthTop = fourth.getBoundingClientRect().top;
-  // const fifthTop = fifth.getBoundingClientRect().top;
-  // const sixthTop = sixth.getBoundingClientRect().top;
-
-//   if (secondTop < windowHeight * 0.8) {
-//     second.classList.add('visible');
-//   } else {
-//     second.classList.remove('visible');
-//   }
-
-//   if (thirdTop < windowHeight * 0.8) {
-//     third.classList.add('visible');
-//   } else {
-//     third.classList.remove('visible');
-//   }
-
-//   if (fourthTop < windowHeight * 0.8) {
-//     fourth.classList.add('visible');
-//   } else {
-//     fourth.classList.remove('visible');
-//   }
-
-  // if (fifthTop < windowHeight * 0.8) {
-  //   fifth.classList.add('visible');
-  // } else {
-  //   fifth.classList.remove('visible');
-  // }
-
-  // if (sixthTop < windowHeight * 0.8) {
-  //   sixth.classList.add('visible');
-  // } else {
-  //   sixth.classList.remove('visible');
-  // }
-// }, 100));
-
-
+//pop up smooth animation for div
 document.addEventListener('DOMContentLoaded', function() {
     const second = document.querySelector('.second');
     const third = document.querySelector('.third');
@@ -74,16 +29,27 @@ document.addEventListener('DOMContentLoaded', function() {
         fourth.classList.add('visible');
       } else {
         fourth.classList.remove('visible');
+       
       }
+
       if (fifthTop < window.innerHeight * 0.8) {
         fifth.classList.add('visible');
       } else {
         fifth.classList.remove('visible');
       }
+
+      if (sixthTop < window.innerHeight * 0.8) {
+        sixth.classList.add('visible');
+      } else {
+        sixth.classList.remove('visible');
+      }
+
  
     });
   });
 
+
+  //leaf animation 
   const leafs = document.querySelectorAll('.first .set div');
 
   for (let i = 0; i < leafs.length; i++) {
@@ -93,6 +59,9 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
 
+
+
+  //background song
   const audio = new Audio("bgmusic.mp3");
   audio.autoplay = true;
 
@@ -106,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
       audio.volume = 0;
     } else {
       icon.setAttribute('name', 'volume-mute-outline'); 
-      audio.volume = 1;
+      audio.volume = 0.6;
     }
   }
 
