@@ -30,3 +30,41 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  const leafs = document.querySelectorAll('.first .set div');
+
+  for (let i = 0; i < leafs.length; i++) {
+    const leaf = leafs[i];
+    const randomLeft = Math.floor(Math.random() * 100);
+    leaf.style.left = `${randomLeft}%`;
+  }
+  
+
+  const audio = new Audio("bgmusic.mp3");
+  let isMuted = false;
+  
+  const toggleMute = () => {
+    isMuted = !isMuted;
+    const icon = document.querySelector('#mute ion-icon');
+    if (isMuted) {
+      icon.setAttribute('name', 'volume-mute');
+      audio.volume = 0;
+    } else {
+      icon.setAttribute('name', 'volume-high');
+      audio.volume = 1;
+    }
+  }
+
+  const restartSong = () => {
+    audio.currentTime = 0;
+    audio.play();
+  }
+  
+  audio.addEventListener('ended', restartSong);
+  
+  const muteButton = document.getElementById("mute");
+  muteButton.addEventListener("click", () => {
+    audio.play();
+    toggleMute();
+  });
+  
+  
