@@ -407,7 +407,7 @@ div .fourth .content h1{
 .timeline::after{
   content: '';
   position: absolute;
-  width: 2px;
+  width: 1px;
   height: 55%;
   background-color: black;
   
@@ -440,6 +440,7 @@ div .fourth .content h1{
   }
   .timeline::after{
     top: 250px;
+    width:2px;
   }
   .text-box {
     padding: 15px;
@@ -460,6 +461,7 @@ div .fourth .content h1{
   }
   .timeline::after {
     top: 180;
+    width:1px;
   }
   
   
