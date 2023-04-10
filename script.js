@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
   //background song
   const audio = new Audio("bgmusic.mp3");
   audio.autoplay = true;
-
+  
   let isMuted = false;
   
   const toggleMute = () => {
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
       audio.volume = 0.6;
     }
   }
-
+  
   const restartSong = () => {
     audio.currentTime = 0;
     audio.play();
@@ -91,7 +91,24 @@ document.addEventListener('DOMContentLoaded', function() {
     audio.play();
     toggleMute();
   });
-
+  
+  // Add this code to start playing the audio when the user scrolls the page
+  let hasStartedScrolling = false;
+  window.addEventListener('scroll', () => {
+    if (!hasStartedScrolling) {
+      hasStartedScrolling = true;
+      audio.play();
+    }
+  });
+  
 //timeline
 
- 
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
+
+window.onload = function() {
+  setTimeout(function() {
+    window.scrollTo(0, 0);
+  }, 0);
+}

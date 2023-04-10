@@ -29,7 +29,7 @@ h2 {
 small {
   font-family: 'Cormorant', serif;
   letter-spacing: 2px;
-  font-weight: bold;
+  font-weight: 950;
 }
 
 .animate-paragraph {
@@ -314,11 +314,9 @@ div .third {
     background-size: cover;
     height: 850px;
     width: 600px;
-   
-   
-    
-    
+
 }
+
 div .fourth {
     background-color: white;
     opacity: 0;
@@ -397,6 +395,13 @@ div .fourth .content h1{
   
 }
 
+.text-box h2 {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+
+   
+}
+
 .right-container {
   right: 30%;
 }
@@ -408,11 +413,11 @@ div .fourth .content h1{
   content: '';
   position: absolute;
   width: 1px;
-  height: 55%;
+  
   background-color: black;
   
-  top: 180;
-  left: 50%;
+  top: 160px;
+  left: 51%;
   animation: moveline 5s ease-in-out forwards;
   box-shadow:  2px 2px 4px rgba(0, 0, 0, 0.5);
 
@@ -440,7 +445,7 @@ div .fourth .content h1{
   }
   .timeline::after{
     top: 250px;
-    width:2px;
+    width: 2px;
   }
   .text-box {
     padding: 15px;
@@ -460,16 +465,12 @@ div .fourth .content h1{
     font-size: 11px;
   }
   .timeline::after {
-    top: 180;
-    width:1px;
+    top: 160;
+    
   }
   
   
 }
-
- 
-/*new div*/
-
 
 .visible .fifth {
   opacity: 1;
@@ -479,7 +480,7 @@ div .fourth .content h1{
 .animate-heading {
   opacity: 0;
   transform: translateY(100px);
-  transition: opacity 0.9s ease, transform 0.9s ease;
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .visible .animate-heading {
@@ -490,7 +491,7 @@ div .fourth .content h1{
 .animate-paragraph {
   opacity: 0;
   transform: translateY(100px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .visible .animate-paragraph {
@@ -498,7 +499,7 @@ div .fourth .content h1{
   transform: translateY(0);
 }
 
-
+/*new div*/
 
 div .fifth {
   background-color: white;
@@ -616,10 +617,6 @@ div .content p {
 }
 
 
-
-
-
-
 /* Navbar bottom */
 .navbar {
     position: fixed;
@@ -731,14 +728,6 @@ div .content p {
     height:40px;
   }
 }
-
-
-
-
-
-
-
-
 
   /*link style */
 a {
