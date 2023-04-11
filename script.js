@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const fourth = document.querySelector('.fourth');
     const fifth = document.querySelector('.fifth');
     const sixth = document.querySelector('.sixth');
+    const seventh = document.querySelector('.seventh');
 
     window.addEventListener('scroll', function() {
       const secondTop = second.getBoundingClientRect().top;
@@ -12,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const fourthTop = fourth.getBoundingClientRect().top;
       const fifthTop = fifth.getBoundingClientRect().top;
       const sixthTop = sixth.getBoundingClientRect().top;
+      const seventhTop = seventh.getBoundingClientRect().top;
 
       if (secondTop < window.innerHeight * 0.8) {
         second.classList.add('visible');
@@ -44,6 +46,13 @@ document.addEventListener('DOMContentLoaded', function() {
         sixth.classList.remove('visible');
       }
 
+      if (seventhTop < window.innerHeight * 0.8) {
+        seventh.classList.add('visible');
+      } else {
+        seventh.classList.remove('visible');
+      }
+    
+
  
     });
   });
@@ -62,44 +71,50 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   //background song
-  const audio = new Audio("bgmusic.mp3");
-  audio.autoplay = true;
+  // const audio = new Audio("bgmusic.mp3");
+  // audio.autoplay = true;
   
-  let isMuted = false;
+  // let isMuted = false;
   
-  const toggleMute = () => {
-    isMuted = !isMuted;
-    const icon = document.querySelector('#mute ion-icon');
-    if (isMuted) {
-      icon.setAttribute('name', 'play-circle-outline'); 
-      audio.volume = 0;
+  // const toggleMute = () => {
+  //   isMuted = !isMuted;
+  //   const icon = document.querySelector('#mute ion-icon');
+  //   if (isMuted) {
+  //     icon.setAttribute('name', 'play-circle-outline'); 
+  //     audio.volume = 0;
+  //   } else {
+  //     icon.setAttribute('name', 'volume-mute-outline'); 
+  //     audio.volume = 0.6;
+  //   }
+  // }
+  
+  // const restartSong = () => {
+  //   audio.currentTime = 0;
+  //   audio.play();
+  // }
+  
+  // audio.addEventListener('ended', restartSong);
+  
+  // const muteButton = document.getElementById("mute");
+  // muteButton.addEventListener("click", () => {
+  //   audio.play();
+  //   toggleMute();
+  // });
+  
+  const menuuToggle = document.querySelector('.menuToggle');
+  const audio = document.getElementById("myAudio");
+  audio.volume = 0.1;
+  audio.loop = true;
+
+  menuuToggle.addEventListener('click', () => {
+    if (menuuToggle.classList.contains('active')) {
+      audio.pause();
     } else {
-      icon.setAttribute('name', 'volume-mute-outline'); 
-      audio.volume = 0.6;
-    }
-  }
-  
-  const restartSong = () => {
-    audio.currentTime = 0;
-    audio.play();
-  }
-  
-  audio.addEventListener('ended', restartSong);
-  
-  const muteButton = document.getElementById("mute");
-  muteButton.addEventListener("click", () => {
-    audio.play();
-    toggleMute();
-  });
-  
-  // Add this code to start playing the audio when the user scrolls the page
-  let hasStartedScrolling = false;
-  window.addEventListener('scroll', () => {
-    if (!hasStartedScrolling) {
-      hasStartedScrolling = true;
       audio.play();
     }
   });
+  
+
   
 //timeline
 
@@ -111,4 +126,10 @@ window.onload = function() {
   setTimeout(function() {
     window.scrollTo(0, 0);
   }, 0);
+}
+
+let menuToggle = document.querySelector('.menuToggle');
+
+menuToggle.onclick = function () {
+  menuToggle.classList.toggle('active')
 }

@@ -15,7 +15,9 @@
     <link href="https://fonts.cdnfonts.com/css/amperzand" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap" rel="stylesheet">
-    <!--Google icon-->
+    <!--flaticon icon-->
+    <!-- <a href="https://www.flaticon.com/free-icons/wedding" title="wedding icons">Wedding icons created by IconMarketPK - Flaticon</a> -->
+
 </head>
 <body >
     <div >
@@ -45,9 +47,15 @@
             </div>
             <div class="second box visible">
                 <div class="content">
+                    <p class="animate-paragraph" id="p-fourth">UNDANGAN WALIMATUL URUS </p>
+                    <p class="animate-paragraph" id="p-fifth"> MERAIKAN TAUTAN KASIH</p>
                     <h1 class="animate-heading">Eizah </h1>
-                    <p class="animate-paragraph">&</p>
+                    <p class="animate-paragraph" id="p-first">&</p>
                     <h1 class="animate-heading">Irsyad</h1>
+                    <img class="animate-paragraph" src="images/location2.png" alt="">
+                    <p class="animate-paragraph" id="p-second">EMBUN RESORT PUTRAJAYA</p>
+                    <p class="animate-paragraph" id="p-third">Ahad, 27 Ogos 2023 | 11:00 AM - 4:00 PM</p>
+                    
                     
                 </div>
                 
@@ -64,18 +72,19 @@
                     <h1 class="animate-heading">Aturcara Majlis</h1>
                     <p class="animate-paragraph">Eizah & Irsyad</p>
                     <div class="timeline" id="visible">
+                        
                         <div class="container-timeline left-container animate-heading" >
                             <div class="text-box">
                                 <h2>1:30 p.m</h2>
                                 <small>Ketibaan keluarga & tetamu jemputan</small>
-                                <span class="left-container-arrow"></span>
+                               
                             </div>
                         </div>
                         <div class="container-timeline right-container event visible">
                             <div class="text-box">
                                 <h2>2:00 p.m</h2>
                                 <small>Ketibaan pengantin lelaki dan rombongan</small>
-                                <span class="right-container-arrow"></span>
+                                
 
                             </div>
                         </div>
@@ -83,7 +92,7 @@
                             <div class="text-box">
                                 <h2>2:15 p.m</h2>
                                 <small>Akad nikah dimulakan</small>
-                                <span class="left-container-arrow"></span>
+                               
 
                             </div>
                         </div>
@@ -91,7 +100,7 @@
                             <div class="text-box">
                                 <h2>3:15 p.m</h2>
                                 <small>Jamuan ringan & sesi bergambar</small>
-                                <span class="right-container-arrow"></span>
+                               
 
                             </div>
                         </div>
@@ -99,7 +108,7 @@
                             <div class="text-box">
                                 <h2>4:30 p.m</h2>
                                 <small>Majlis bersurai</small>
-                                <span class="left-container-arrow"></span>
+                                
 
                             </div>
                         </div>
@@ -117,40 +126,22 @@
                 
 
             </div>
-            <div class="navbar">
-                <ul>
-                    <li><a href="#">
-                        <span class="icon">
-                            <img src="images/calendar.png" alt="" id="position_edit">
-                        </span>
-                        <span class="text">Kalendar</span>
-                    </li></a>
-                    <li><a href="#">
-                        <span class="icon">
-                            <img src="images/call.png" alt="" id="position_edit">
-                        </span>
-                        <span class="text">Hubungi</span>
-                    </a></li>
-                    <li><a href="#">
-                        <span class="icon">
-                            <img src="images/location.png" alt="" id="size_edit">
-                        </span>
-                        <span class="text">lokasi</span>
-                    </a></li>
-                    <li><a href="#">
-                        <span class="icon">
-                            <img src="images/rsvp.png" alt="" id="size_edit">
-                        </span>
-                        <span class="text">Rsvp</span>
-                    </a></li>
-                    <span class="sound">
-                        <button type="button" id="mute">
-                            <ion-icon name="play-circle-outline" class="icon"></ion-icon>
-                        </button>
-                    </span>
-                    
-                </ul>
+            <div class="navigation">
+                <div class="menuToggle"><i></i></div>
+                <div class="menu">
+                    <ul>
+                        <li style="--i:0.1s"><a href="$"><ion-icon name="calendar-outline"></ion-icon></a></li>
+                        <li style="--i:0.2s"><a href="$"><ion-icon name="call-outline"></ion-icon></a></li>
+                        <li></li>
+                        <li style="--i:0.2s"><a href="$"><ion-icon name="location-outline"></ion-icon></a></li>
+                        <li style="--i:0.1s"><a href="$"><ion-icon name="pencil-outline"></ion-icon></a></li>
+                    </ul>
+                </div>
+                <audio id="myAudio">
+                    <source src="bgmusic.mp3" type="audio/mpeg">
+                  </audio>
             </div>
+           
             
         
 
