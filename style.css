@@ -48,21 +48,28 @@ div {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    
         
 }
 
 div .container .box {
     border: 2px solid gold;
     border-radius: 5%;
-    /* height:450px; */
-    
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
     
-
-
+   
 }
+
+
+
+div.box.visible {
+  opacity: 1;
+  opacity: 1; /* Show when visible */
+  transform: scale(1);
+}
+
 
 div .first  {
     background-color: #E4D0D0;
@@ -73,6 +80,7 @@ div .first  {
     background-position: center;
     height: 850px;
     width: 600px;
+    margin-top: 50px;
     
     
 }
@@ -276,6 +284,9 @@ div .second {
     align-items: center;
     justify-content: center;
     position: relative;
+    opacity: 0; /* Start hidden */
+    transform: scale(0.5); /* Start small */
+    transition: opacity 0.5s ease-out, transform 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
     
 
 }
@@ -349,6 +360,11 @@ div .second .content img {
   div .second .content p {
     font-size: 55px;
   }
+  div .second .content #p-first {
+    font-size: 55px;
+  }
+
+
   div .second .content {
     margin-bottom: 70px;
   }
@@ -397,6 +413,9 @@ div .third {
     background-size: cover;
     height: 850px;
     width: 600px;
+    opacity: 0; /* Start hidden */
+    transform: scale(0.5); /* Start small */
+    transition: opacity 0.5s ease-out, transform 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
 
 }
 
@@ -415,6 +434,9 @@ div .fourth {
     align-items: center;
     flex-direction: column;
     position: relative;
+    opacity: 0; /* Start hidden */
+    transform: scale(0.5); /* Start small */
+    transition: opacity 0.5s ease-out, transform 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
 
 }
 
@@ -426,7 +448,7 @@ div .fourth .content h1{
 
 /*timeline */
 .container-timeline {
-  padding: 0px 90px;
+  padding: 0px 50px;
   height: 45px;
   position: relative;
   width: 160px;
@@ -435,7 +457,10 @@ div .fourth .content h1{
   transform: translateY(-30px);
   animation-delay: 0.5s;
   
+  
 }
+
+
 
 @keyframes movedown {
   0%{
@@ -468,22 +493,24 @@ div .fourth .content h1{
 
 .text-box {
   padding: 15px;
-  background-color: white;
+  
   position: relative;
   border-radius: 6px;
   
   font-size: 11px;
   margin-top: 0px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  
   
 }
 
 .text-box h2 {
   text-decoration: underline;
   text-underline-offset: 3px;
+  padding-bottom: 5px;
 
    
 }
+
 
 .right-container {
   right: 30%;
@@ -524,7 +551,7 @@ div .fourth .content h1{
     
   }
   .text-box {
-    font-size: 15px;
+    font-size: 17px;
   }
   .timeline::after{
     top: 250px;
@@ -563,7 +590,7 @@ div .fourth .content h1{
 .animate-heading {
   opacity: 0;
   transform: translateY(100px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 1s ease, transform 1s ease;
 }
 
 .visible .animate-heading {
@@ -574,13 +601,14 @@ div .fourth .content h1{
 .animate-paragraph {
   opacity: 0;
   transform: translateY(100px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 1s ease, transform 1s ease;
 }
 
 .visible .animate-paragraph {
   opacity: 1;
   transform: translateY(0);
 }
+
 
 /*new div*/
 
@@ -594,6 +622,9 @@ div .fifth {
   background-repeat: no-repeat;
   background-origin: center;
   background-size: cover;
+  opacity: 0; /* Start hidden */
+  transform: scale(0.5); /* Start small */
+  transition: opacity 0.5s ease-out, transform 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 div .sixth {
@@ -606,6 +637,9 @@ div .sixth {
   background-repeat: no-repeat;
   background-origin: center;
   background-size: cover;
+  opacity: 0; /* Start hidden */
+  transform: scale(0.5); /* Start small */
+  transition: opacity 0.5s ease-out, transform 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 
@@ -620,11 +654,11 @@ div .seventh {
   background-repeat: no-repeat;
   background-origin: center;
   background-size: cover;
+  opacity: 0; /* Start hidden */
+  transform: scale(0.5); /* Start small */
+  transition: opacity 0.5s ease-out, transform 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-div.box.visible {
-    opacity:1;
-}
 
 
 div .sticky {
@@ -714,7 +748,7 @@ div .content p {
   position: relative;
   width: 55px;
   height: 55px;
-  background-color: #F5EBEB;
+  background-color: #F0997D;
   border: 5px solid var(--clr);
   border-radius: 50%;
   cursor: pointer;
@@ -725,7 +759,7 @@ div .content p {
   transform: translateY(-30px);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   opacity: 0.7;
-  
+  margin-bottom: 5px;
 }
 
 .menuToggle::before{
@@ -783,6 +817,7 @@ div .content p {
   transition: transform 0.5s, width 0.5s, height 0.5s;
   transition-delay:0s, 0.5s, 0.5s ;
   opacity: 0.5;
+  margin-bottom: 5px;
   
 }
 
