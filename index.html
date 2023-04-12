@@ -18,6 +18,10 @@
     <!--flaticon icon-->
     <!-- <a href="https://www.flaticon.com/free-icons/wedding" title="wedding icons">Wedding icons created by IconMarketPK - Flaticon</a> -->
 
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
 </head>
 <body >
     <div >
@@ -55,6 +59,7 @@
                     <img class="animate-paragraph" src="images/location2.png" alt="">
                     <p class="animate-paragraph" id="p-second">EMBUN RESORT PUTRAJAYA</p>
                     <p class="animate-paragraph" id="p-third">Ahad, 27 Ogos 2023 | 11:00 AM - 4:00 PM</p>
+                    <img class="animate-heading" src="images/bismillah.png" alt=" "id="img2">
                     
                     
                 </div>
@@ -62,6 +67,20 @@
 
             </div>
             <div class="third box visible">
+                <div class="third-text">
+                    
+                    <p class="animate-paragraph top" >DENGAN PENUH  </p>
+                    <p class="animate-paragraph top" >KESYUKURAN, KAMI; </p>
+                    <p class="animate-paragraph top" >KHARUNNA'IM BIN RAMLI </p>
+                    <p class="animate-paragraph top" >&</p>
+                    <p class="animate-paragraph top" >NORIZAN BINTI MOHD NOH</p>
+                    <p class="animate-paragraph top" >INGIN MENJEMPUT</p>
+                    <p class="animate-paragraph top" >DATO', DATIN, TUAN,</p>
+                    <p class="animate-paragraph top" >PUAN, ENCIK, CIK</p>
+                    <p class="animate-paragraph top" >KE MAJLIS PERNIKAHAN</p>
+                    <p class="animate-paragraph top" >PUTERI KAMI</p>
+                    <img class="animate-heading" src="images/bismillah.png" alt="">
+                </div>
 
             </div>
             <div class="seventh box visible">
@@ -118,23 +137,25 @@
                 
 
             </div>
-            <div class="fifth box visible">
+            <div class="fifth box visible" id="calendar">
                 
 
             </div>
-            <div class="sixth box visible">
+            <div class="sixth box visible" id="rsvp">
                 
 
             </div>
             <div class="navigation">
-                <div class="menuToggle"><i></i></div>
+                <div class="menuToggle"><i></i>
+                <ion-icon name="musical-notes-outline" id="music-icon"></ion-icon>
+                </div>
                 <div class="menu">
                     <ul>
-                        <li style="--i:0.1s"><a href="$"><ion-icon name="calendar-outline"></ion-icon></a></li>
-                        <li style="--i:0.2s"><a href="$"><ion-icon name="call-outline"></ion-icon></a></li>
+                        <li style="--i:0.1s"><a href="#calendar"><ion-icon name="calendar-outline"></ion-icon></a></li>
+                        <li style="--i:0.2s"><a href="#"><ion-icon name="call-outline"></ion-icon></a></li>
                         <li></li>
-                        <li style="--i:0.2s"><a href="$"><ion-icon name="location-outline"></ion-icon></a></li>
-                        <li style="--i:0.1s"><a href="$"><ion-icon name="pencil-outline"></ion-icon></a></li>
+                        <li style="--i:0.2s"><a href="#"><ion-icon name="location-outline"></ion-icon></a></li>
+                        <li style="--i:0.1s"><a href="#rsvp"><ion-icon name="pencil-outline"></ion-icon></a></li>
                     </ul>
                 </div>
                 <audio id="myAudio">

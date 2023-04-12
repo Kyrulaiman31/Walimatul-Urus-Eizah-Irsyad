@@ -15,38 +15,38 @@ document.addEventListener('DOMContentLoaded', function() {
       const sixthTop = sixth.getBoundingClientRect().top;
       const seventhTop = seventh.getBoundingClientRect().top;
 
-      if (secondTop < window.innerHeight * 0.9) {
+      if (secondTop < window.innerHeight * 0.5) {
         second.classList.add('visible');
       } else {
         second.classList.remove('visible');
       }
 
-      if (thirdTop < window.innerHeight * 0.9) {
+      if (thirdTop < window.innerHeight * 0.5) {
         third.classList.add('visible');
       } else {
         third.classList.remove('visible');
       }
 
-      if (fourthTop < window.innerHeight * 0.9) {
+      if (fourthTop < window.innerHeight * 0.5) {
         fourth.classList.add('visible');
       } else {
         fourth.classList.remove('visible');
        
       }
 
-      if (fifthTop < window.innerHeight * 0.9) {
+      if (fifthTop < window.innerHeight * 0.5) {
         fifth.classList.add('visible');
       } else {
         fifth.classList.remove('visible');
       }
 
-      if (sixthTop < window.innerHeight * 0.9) {
+      if (sixthTop < window.innerHeight * 0.5) {
         sixth.classList.add('visible');
       } else {
         sixth.classList.remove('visible');
       }
 
-      if (seventhTop < window.innerHeight * 0.9) {
+      if (seventhTop < window.innerHeight * 0.5) {
         seventh.classList.add('visible');
       } else {
         seventh.classList.remove('visible');
@@ -109,3 +109,16 @@ let menuToggle = document.querySelector('.menuToggle');
 menuToggle.onclick = function () {
   menuToggle.classList.toggle('active')
 }
+
+// Smooth scrolling for internal links
+$(document).on('click', 'a[href^="#"]', function(event) {
+  event.preventDefault();
+
+  var target = $($.attr(this, 'href'));
+
+  if (target.length) {
+    $('html, body').animate({
+      scrollTop: target.offset().top
+    }, 1000);
+  }
+});
